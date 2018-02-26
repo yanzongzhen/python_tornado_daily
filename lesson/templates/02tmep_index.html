@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+欢迎用户 {{ username }} 登录
+
+<br>
+{{ 1+2 }}
+<br>
+{{ time.time() }}
+<br>
+{{ haha() }}
+<br>
+
+{% if username!='no' %}
+    欢迎用户 {{ username }} 登录
+{% else %}
+    您还没有登录
+{% end %}
+<br>
+{% for i in li%}
+    {{ i }} <br>
+{% end %}
+
+</body>
+</html>

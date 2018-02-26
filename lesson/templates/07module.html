@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module</title>
+</head>
+<body>
+
+{{ username }}<br>
+
+{{ fun() }}<br>
+
+{{ cal() }}<br>
+
+{{ cal().sum(6,9) }}<br>
+
+{% import time %}
+{{ time.time() }}<br>
+
+{% from util.mode_file import sub,upper,Count %}
+
+{{ sub(5,3) }}<br>
+
+{{ upper('wenmang') }}<br>
+
+{{ Count().url }}<br>
+{% raw Count().url %}<br>
+
+{{ Count().sum(6,9) }}<br>
+{{ Count.sum(6,9) }}<br>
+
+{{ Count().args(1,2,3,4) }}<br>
+
+{{ methods1() }}<br>
+
+{% module UiModule() %}<br>
+
+
+{% module Advertisement() %}<br>
+
+<!--通过set设置局部变量-->
+{% set su = Count().sum %}
+{{ su(6,9)}}
+
+{% set args = Count().args %}
+{% for a in args(1,2,3,4,5)%}
+    {{ a }}<br>
+{% end %}
+
+{% apply upper %}
+    <br>
+    ren hao e  <br>
+    xieyulong bu e
+{% end %}
+<br>
+{{ upper('hahaha') }}
+
+<br>
+{{ linkify('百度：http://www.baidu.com') }} <br>
+{% raw linkify('百度：http://www.baidu.com') %} <br>
+
+
+</body>
+</html>

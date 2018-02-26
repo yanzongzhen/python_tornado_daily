@@ -1,0 +1,17 @@
+{% extends "./04base.html" %}
+
+{% block title %} {{ username }} {% end %}
+
+
+{% block body %}
+
+    {% if username!='no' %}
+        欢迎用户 {{ username }} 登录
+        <br>
+        <img src="/static/images/c.jpg" width="250" height="250">
+        <br>
+    {% else %}
+        abbbb{% include "./06include.html" %}
+    {% end %}
+
+{% end %}
